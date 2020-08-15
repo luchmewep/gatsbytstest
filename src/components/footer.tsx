@@ -1,14 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import styled from "styled-components"
-
-const FooterContainer = styled.footer``
-
-const Copyright = styled.p`
-  text-align: center;
-  font-size: 0.8rem;
-  margin: 2rem 0;
-`
+import { MDBFooter, MDBContainer, MDBRow, MDBCol } from "mdbreact"
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -23,17 +15,42 @@ const Footer = () => {
   `)
 
   return (
-    <FooterContainer>
-      <Copyright>
-        <a href={data.site.siteMetadata.siteUrl + '/generate'}>
-          Use this Template
-        </a> | <a href={data.site.siteMetadata.siteUrl + '/issues'}>
-          Report an Issue
-        </a> | <a href="https://www.gatsbyjs.org/docs/">
-          Gatsby Docs
-        </a>
-      </Copyright>
-    </FooterContainer>
+    <MDBFooter color="cyan" className="font-small darken-3 pt-0">
+      <MDBContainer>
+        <MDBRow>
+          <MDBCol md="12" className="py-5">
+            <div className="mb-5 flex-center">
+              <a className="fb-ic">
+                <i className="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+              </a>
+              <a className="tw-ic">
+                <i className="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+              </a>
+              <a className="gplus-ic">
+                <i className="fab fa-google-plus fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+              </a>
+              <a className="li-ic">
+                <i className="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+              </a>
+              <a className="ins-ic">
+                <i className="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+              </a>
+              <a className="pin-ic">
+                <i className="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+              </a>
+            </div>
+          </MDBCol>
+        </MDBRow>
+      </MDBContainer>
+      <div className="footer-copyright text-center py-3">
+        <MDBContainer fluid>
+          &copy; {new Date().getFullYear()} Copyright:{" "}
+          <a href={data.site.siteMetadata.siteUrl + "/generate"}>
+            MDBootstrap.com
+          </a>
+        </MDBContainer>
+      </div>
+    </MDBFooter>
   )
 }
 

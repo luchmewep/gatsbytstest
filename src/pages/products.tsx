@@ -1,21 +1,18 @@
 import React, { useContext, useEffect } from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
 import { CurrentPageContext } from "../context/CurrentPage"
 import { MDBBtn } from "mdbreact"
+import SEO from "../components/seo"
 
-const IndexPage = () => {
+export default function Products() {
   const { currentPage, setCurrPage, checkPage } = useContext(CurrentPageContext)
   useEffect(() => {
-    setCurrPage("Home")
+    setCurrPage("Products")
   }, [])
-
   return (
     <Layout>
-      <SEO title="Home" />
-      <MDBBtn onClick={() => setCurrPage("Home")}>{currentPage}</MDBBtn>
+      <SEO title="Products" />
+      <MDBBtn onClick={() => setCurrPage("Products")}>{currentPage}</MDBBtn>
     </Layout>
   )
 }
-
-export default IndexPage
