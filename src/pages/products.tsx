@@ -1,18 +1,24 @@
 import React, { useContext, useEffect } from "react"
 import Layout from "../components/layout"
 import { CurrentPageContext } from "../context/CurrentPage"
-import { MDBBtn } from "mdbreact"
 import SEO from "../components/seo"
+import { MDBJumbotron, MDBContainer } from "mdbreact"
 
 export default function Products() {
-  const { currentPage, setCurrPage, checkPage } = useContext(CurrentPageContext)
+  const { setCurrPage } = useContext(CurrentPageContext)
   useEffect(() => {
     setCurrPage("Products")
   }, [])
+
   return (
     <Layout>
       <SEO title="Products" />
-      <MDBBtn onClick={() => setCurrPage("Products")}>{currentPage}</MDBBtn>
+      <MDBJumbotron fluid>
+        <MDBContainer>
+          <h2 className="display-4">Products Page</h2>
+          <p className="lead">This is where the products will be displayed.</p>
+        </MDBContainer>
+      </MDBJumbotron>
     </Layout>
   )
 }

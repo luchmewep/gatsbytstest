@@ -43,30 +43,13 @@ export default function NavBar() {
               Blogs
             </Link>
           </MDBNavItem>
-          <MDBNavItem>
-            <MDBDropdown>
-              <MDBDropdownToggle nav caret>
-                <div className="d-none d-md-inline">MDBDropdown</div>
-              </MDBDropdownToggle>
-              <MDBDropdownMenu className="dropdown-default" right>
-                <MDBDropdownItem href="#!">Action</MDBDropdownItem>
-                <MDBDropdownItem href="#!">Another Action</MDBDropdownItem>
-                <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
-                <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
-              </MDBDropdownMenu>
-            </MDBDropdown>
+          <MDBNavItem active={checkPage("Examples")}>
+            <Link className="nav-link" to="/examples">
+              Testing Area
+            </Link>
           </MDBNavItem>
         </MDBNavbarNav>
         <MDBNavbarNav right>
-          <MDBNavItem>
-            <Link
-              className="nav-link waves-effect waves-light d-flex align-items-center"
-              to="#!"
-            >
-              1
-              <MDBIcon icon="envelope" className="ml-1" />
-            </Link>
-          </MDBNavItem>
           <MDBNavItem>
             <MDBDropdown>
               <MDBDropdownToggle className="dopdown-toggle" nav>

@@ -20,7 +20,7 @@ const Layout = ({ children }: LayoutProps) => {
       }}
     >
       <NavBar />
-      <main>{children}</main>
+      <MDBContainer className="pt-3">{children}</MDBContainer>
       <Footer />
     </MDBContainer>
   )

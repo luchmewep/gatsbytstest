@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Typescript Minimal`,
-    description: `A minimal, bare bones Typescript starter for Gatsby`,
-    author: `@benbarber`,
-    siteUrl: `https://github.com/benbarber/gatsby-typescript-minimal`
+    title: `WhatchaGet`,
+    description: `Frontrow-like website`,
+    author: `@luchmewep`,
+    siteUrl: `https://github.com/benbarber/gatsby-typescript-minimal`,
   },
   plugins: [
     `gatsby-plugin-typescript`,
@@ -51,8 +51,19 @@ module.exports = {
         fonts: [`Roboto`],
       },
     },
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        // This type will contain the remote schema Query type
+        typeName: "NETX",
+        // This is the field under which it's accessible
+        fieldName: "netx",
+        // URL to query from
+        url: "http://127.0.0.1:8002/graphql",
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }

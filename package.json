@@ -8,6 +8,7 @@
     "@luchmewep/fapro": "^5.13.0",
     "gatsby": "^2.24.47",
     "gatsby-image": "^2.2.8",
+    "gatsby-source-graphql": "^2.7.1",
     "mdbreact": "https://bit.ly/mdbreact4250",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",

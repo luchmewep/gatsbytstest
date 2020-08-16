@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { CurrentPageContext } from "../context/CurrentPage"
-import { MDBBtn } from "mdbreact"
+import { MDBBtn, MDBJumbotron, MDBContainer } from "mdbreact"
 
 const IndexPage = () => {
   const { currentPage, setCurrPage, checkPage } = useContext(CurrentPageContext)
@@ -13,7 +13,12 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <MDBBtn onClick={() => setCurrPage("Home")}>{currentPage}</MDBBtn>
+      <MDBJumbotron fluid>
+        <MDBContainer>
+          <h2 className="display-4">Homepage</h2>
+          <p className="lead">This is homepage of NetX.</p>
+        </MDBContainer>
+      </MDBJumbotron>
     </Layout>
   )
 }
