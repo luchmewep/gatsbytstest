@@ -59,7 +59,7 @@ module.exports = {
         // This is the field under which it's accessible
         fieldName: "netx",
         // URL to query from
-        url: "http://127.0.0.1:8002/graphql",
+        url: "https://gatsbytstest.herokuapp.com/graphql",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
