@@ -72,48 +72,6 @@ export default function Blogs() {
           </p>
         </MDBContainer>
       </MDBJumbotron>
-      <MDBContainer>
-        <MDBCarousel
-          activeItem={1}
-          length={3}
-          slide={true}
-          showControls={true}
-          showIndicators={true}
-          multiItem
-        >
-          <MDBCarouselInner>
-            <MDBRow>
-              <MDBCarouselItem itemId="1">
-                {posts.map(
-                  ({
-                    id,
-                    title,
-                    content,
-                    author: { name, email },
-                  }: blogtInt) => (
-                    <MDBCol key={id} md="4">
-                      <MDBCard className="mb-2">
-                        <MDBCardImage
-                          className="img-fluid"
-                          src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
-                        />
-                        <MDBCardBody>
-                          <MDBCardTitle>{title}</MDBCardTitle>
-                          <MDBCardText>{content}</MDBCardText>
-                          <MDBBtn color="primary">MDBBtn</MDBBtn>
-                        </MDBCardBody>
-                        <MDBCardFooter small muted>
-                          Created by {name} ({email})
-                        </MDBCardFooter>
-                      </MDBCard>
-                    </MDBCol>
-                  )
-                )}
-              </MDBCarouselItem>
-            </MDBRow>
-          </MDBCarouselInner>
-        </MDBCarousel>
-      </MDBContainer>
       <MDBCardGroup column>
         {posts.map(
           ({ id, title, content, author: { name, email } }: blogtInt) => (

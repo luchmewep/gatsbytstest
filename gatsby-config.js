@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `WhatchaGet`,
-    description: `Frontrow-like website`,
+    title: `NetworX`,
+    description: `Health is wealth`,
     author: `@luchmewep`,
-    siteUrl: `https://github.com/benbarber/gatsby-typescript-minimal`,
+    siteUrl: `https://infallible-cray-1ffd47.netlify.app/`,
   },
   plugins: [
     `gatsby-plugin-typescript`,
@@ -21,12 +21,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-typescript-minimal`,
-        short_name: `starter`,
+        name: `NetworX`,
+        short_name: `NetX`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
-        display: `minimal-ui`,
+        display: `standalone`,
         icon: `src/images/logo.png`,
       },
     },
@@ -59,7 +59,7 @@ module.exports = {
         // This is the field under which it's accessible
         fieldName: "netx",
         // URL to query from
-        url: "https://gatsbytstest.herokuapp.com/graphql",
+        url: "https://phplaravel-457694-1433264.cloudwaysapps.com/graphql",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
